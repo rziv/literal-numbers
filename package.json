@@ -1,0 +1,26 @@
+{
+  "name": "jasminemodule",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start",
+    "start": "webpack --config webpack.config.js"
+  },
+  "author": "Ran R. Ziv <ran.ziv@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "6.26.0",
+    "babel-loader": "7.1.3",
+    "babel-preset-env": "1.6.1",
+    "jasmine": "3.1.0",
+    "karma": "2.0.0",
+    "karma-chrome-launcher": "2.2.0",
+    "karma-jasmine": "1.1.1",
+    "karma-webpack": "2.0.13"
+  },
+  "devDependencies": {
+    "webpack": "4.0.1",
+    "webpack-cli": "2.0.9"
+  }
+}
