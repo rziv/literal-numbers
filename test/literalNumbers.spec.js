@@ -24,7 +24,7 @@ describe('literal numbers', function () {
             expect(literalNumbers.convertNumber('1.123/2', { lang: 'en' })).toEqual('');
         });
 
-        it('correctly converts numbers < 10', function () {
+        fit('correctly converts numbers < 10', function () {
             expect(literalNumbers.convertNumber(1000000000, { lang: 'en' })).toEqual('one billion');
             expect(literalNumbers.convertNumber(3, { lang: 'en' })).toEqual('three');
             expect(literalNumbers.convertNumber(8, { lang: 'en' })).toEqual('eight');
