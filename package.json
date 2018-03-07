@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "karma start",
+    "test": "karma --single-run true start",
     "start": "webpack --config webpack.config.js"
   },
   "author": "Ran R. Ziv <ran.ziv@gmail.com>",
