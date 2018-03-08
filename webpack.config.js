@@ -1,3 +1,4 @@
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 module.exports = {
     entry: './test/literalNumbers.spec.js',
     output: {
@@ -6,6 +7,7 @@ module.exports = {
     node: {
         fs: 'empty'
     },
+    plugins: [ new UglifyJSPlugin() ],
     mode: 'development',   
     module: {
         rules: [
