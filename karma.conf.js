@@ -8,7 +8,7 @@ module.exports = (config) => {
             // each file acts as entry point for the webpack configuration
         ],
         frameworks: ["jasmine"],
-        browsers: [ "Chrome"],
+        browsers: [ "ChromeHeadless"],
         preprocessors: {
             // add webpack as preprocessor
             'test/*.spec.js': ['webpack'],
