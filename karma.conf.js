@@ -13,8 +13,7 @@ module.exports = (config) => {
             // add webpack as preprocessor
             'test/*.spec.js': ['webpack'],
             'test/**/*.spec.js': ['webpack']
-        },
-
+        },        
         webpack: {
             // karma watches the test entry points
             // (you don't need to specify the entry option)
@@ -22,7 +21,6 @@ module.exports = (config) => {
 
             // webpack configuration
         },
-
         webpackMiddleware: {
             // webpack-dev-middleware configuration
             // i. e.

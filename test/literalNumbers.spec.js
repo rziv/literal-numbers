@@ -1,13 +1,11 @@
 ﻿import literalNumbers from '../src/literalNumbers'
 /* eslint-disable no-magic-numbers */
 describe('literal numbers', function () {
-    it('defined', function () {
+    fit('defined', function () {
         expect(typeof literalNumbers).toEqual('object');
-        expect(typeof literalNumbers.convertNumber).toEqual('function');
-        debugger;
-    });
-
-    xdescribe('english literal numbers', function () {
+        expect(typeof literalNumbers.convertNumber).toEqual('function');       
+    });    
+    describe('english literal numbers', function () {
 
         fit('doesn\'t blow up weirdly with invalid input', function () {
             expect(literalNumbers.convertNumber('asdfasdfasdf', { lang: 'en' })).toEqual('');
@@ -30,19 +28,19 @@ describe('literal numbers', function () {
             expect(literalNumbers.convertNumber(8, { lang: 'en' })).toEqual('eight');
         });
 
-        it('correctly converts numbers < 20', function () {
+        fit('correctly converts numbers < 20', function () {
             expect(literalNumbers.convertNumber(13, { lang: 'en' })).toEqual('thirteen');
             expect(literalNumbers.convertNumber(19, { lang: 'en' })).toEqual('nineteen');
         });
 
-        it('correctly converts numbers < 100', function () {
+        fit('correctly converts numbers < 100', function () {
             expect(literalNumbers.convertNumber(20, { lang: 'en' })).toEqual('twenty');
             expect(literalNumbers.convertNumber(25, { lang: 'en' })).toEqual('twenty-five');
             expect(literalNumbers.convertNumber(88, { lang: 'en' })).toEqual('eighty-eight');
             expect(literalNumbers.convertNumber(73, { lang: 'en' })).toEqual('seventy-three');
         });
 
-        it('correctly converts numbers < 1000', function () {
+        fit('correctly converts numbers < 1000', function () {
             expect(literalNumbers.convertNumber(200, { lang: 'en' })).toEqual('two hundred');
             expect(literalNumbers.convertNumber(242, { lang: 'en' })).toEqual('two hundred and forty-two');
             expect(literalNumbers.convertNumber(1234, { lang: 'en' })).toEqual(
@@ -53,7 +51,7 @@ describe('literal numbers', function () {
             );
         });
 
-        it('correctly converts numbers > 1000', function () {
+        fit('correctly converts numbers > 1000', function () {
             expect(literalNumbers.convertNumber(4323000, { lang: 'en' })).toEqual(
                 'four million three hundred twenty-three thousand'
             );
