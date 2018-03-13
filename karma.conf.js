@@ -2,13 +2,13 @@ module.exports = (config) => {
     config.set({
         // ... normal karma configuration
         files: [
-            // all files ending in "_test"
+            // all files ending in ".spec"
             { pattern: 'test/*.spec.js', watched: false },
             { pattern: 'test/**/*.spec.js', watched: false }
             // each file acts as entry point for the webpack configuration
         ],
         frameworks: ["jasmine"],
-        browsers: [ "Chrome"],
+        browsers: [ "ChromeHeadless"],
         preprocessors: {
             // add webpack as preprocessor
             'test/*.spec.js': ['webpack'],
